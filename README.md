@@ -1,20 +1,20 @@
 What
 =====
 
- This script migrates trac tickets to gitlab issues.
+ This script migrates Trac Tickets to Gitlab Issues.
 
 Features
 --------
- * Component & Issue-Type are converted to labels
+ * Trac Components & Ticket-Types are converted to Gitlab Labels
  * Milestones are created in Gitlab from fixture data manualy grabbed from trac (copy/paste)
- * Comments to issues are copied over
+ * Comments to Trac Tickets are copied over to their respective Gitlab Issues
  * Wiki Syntax in comments/descriptions is sanitized for my basic usage
 
 
 How
 ====
 
- Usage: configure the following variables in in ```migrate.py```` and run it (```python migrate.py```). Make sure you test it on a test project prior, if you run it twice against the same project you will get duplicated issues.
+ Usage: configure the following variables in ```migrate.py```` and run it (```python migrate.py```). Make sure you test it on a test project prior, if you run it twice against the same project you will get duplicated issues.
 
 Source
 -------
