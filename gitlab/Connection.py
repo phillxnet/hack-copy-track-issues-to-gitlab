@@ -41,27 +41,27 @@ class Connection(object):
         :return: json of GET
         """
         completed_url = self._complete_url(url_postfix, keywords)
-        r = requests.get(completed_url + "&per_page=100")
+        r = requests.get(completed_url + "&per_page=100", verify=False)
         json = r.json()
         return json
 
     def put(self, url_postfix, data, **keywords):
         completed_url = self._complete_url(url_postfix, keywords)
-        r = requests.put(completed_url,data= data)
+        r = requests.put(completed_url,data= data, verify=False)
         j = r.json()
         return j
 
     def put_json(self, url_postfix, data, **keywords):
         completed_url = self._complete_url(url_postfix, keywords)
         payload = json.dumps(data)
-        r = requests.put(completed_url, payload)
+        r = requests.put(completed_url, payload, verify=False)
         j = r.json()
         return j
 
     def post_json(self, url_postfix, data, **keywords):
         completed_url = self._complete_url(url_postfix, keywords)
         payload = json.dumps(data)
-        r = requests.post(completed_url, data=data)
+        r = requests.post(completed_url, data=data, verify=False)
         j = r.json()
         return j
 
